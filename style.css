@@ -1,0 +1,32 @@
+#main {
+    display: block;
+    position: flex;
+    width: 25%;
+    height: 50%;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#main img {
+    width: 150px;
+    height: auto;
+}
+
+#main button {
+    display: block;
+    widows: auto;
+    height: 50px;
+    background-color: rgb(99, 60, 170);
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    color: #fff;
+    border: none;
+}
+
+#main h1 {}

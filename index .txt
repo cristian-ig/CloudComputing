@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <div id="main">
+        <h1>Artist</h1>
+        <h2>Track name</h2>
+        <img src=" http://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/track/7DbwSguJz1rEE1uNskg8je">
+        <button type="button">Random Track</button>
+    </div>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+</body>
+</html>

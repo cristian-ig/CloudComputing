@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <div id="main">
+        <h1 id="artist">Artist</h1>
+        <h2 id="track">Track name</h2>
+        <img id="qr" src=" http://api.qrserver.com/v1/create-qr-code/?data=https://open.spotify.com/track/7DbwSguJz1rEE1uNskg8je">
+        <button id="btn" type="button" onclick="req();">Random Track</button>
+    </div>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script type="text/javascript">
+        function req(){
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function (){
+                if (xhr.readyState == 4){
+                    if (xhr.status==200){
+                        console.log(xhr.responseText);
+                        dict = JSON.parse(xhr.responseText)
+                        document.getElementById("artist").innerText = dict['artist']
+                        document.getElementById("track").innerText = dict['track']
+                        document.getElementById("qr").src = dict['qr']
+                        
+
+                    }else{
+                        console.log("Error ocurred with xhr request");
+                    }
+    
+                }
+        }
+            console.log("XHR function");
+            xhr.open('get','http://localhost:8000/track',true);
+            xhr.send();
+        }
+       
+    </script>
+</body>
+
+</html>
